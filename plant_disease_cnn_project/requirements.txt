@@ -1,10 +1,6 @@
-# If PyTorch with CUDA is already installed, keep that installation and
-# install only the remaining packages plus a matching torchvision version.
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch
 torchvision
 streamlit
 pillow
 numpy
-matplotlib
-scikit-learn
-tqdm

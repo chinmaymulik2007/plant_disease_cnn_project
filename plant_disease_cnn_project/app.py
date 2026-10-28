@@ -18,8 +18,9 @@ st.set_page_config(
 st.title("🌿 Plant Disease Classification")
 st.write("Upload a plant leaf image to classify its disease category.")
 
-MODEL_PATH = Path("artifacts/best_model.pth")
-CLASSES_PATH = Path("artifacts/class_names.json")
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "artifacts" / "best_model.pth"
+CLASSES_PATH = BASE_DIR / "artifacts" / "class_names.json"
 
 if not MODEL_PATH.exists() or not CLASSES_PATH.exists():
     st.error("Model files are missing. Run python train.py first.")
